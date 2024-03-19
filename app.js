@@ -1,6 +1,11 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
+const cors = require('cors');
+
+
+// Enable CORS for all origins
+app.use(cors());
 
 app.get("/", (req, res) => res.type('html').send(html));
 
